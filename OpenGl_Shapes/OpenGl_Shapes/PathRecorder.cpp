@@ -38,7 +38,7 @@ void PathRecorder::execute()
 	}
 	else if (!_isRecording && _shape && !_path.empty())
 	{
-		_shape->_position = _path.back();
-		_path.pop_back();
+		_shape->_position = _path.front();
+		_path.pop_front();
 	}
 }
